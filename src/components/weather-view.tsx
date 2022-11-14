@@ -6,6 +6,9 @@ import { getWeathers } from "../store";
 import { WeatherMainView, WeatherSubView, RealTimeUpdater } from "./index";
 import { Config } from "../helpers";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 interface IProps {
   actions: {
     getWeathers: typeof getWeathers;
@@ -59,6 +62,7 @@ class WeatherView extends React.Component<IProps, IState> {
           <WeatherSubView />
         </div>
         <RealTimeUpdater selectedCity={selectedCity} />
+        <ToastContainer />
       </div>
     );
   }
