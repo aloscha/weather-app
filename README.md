@@ -10,6 +10,7 @@ Show weather for configured cities
 REACT_APP_WEATHER_API_KEY = __API_KEY__
 ```
 To get api key you need to register on https://www.visualcrossing.com/ and paste API KEY from there
+
 3. `npm start`
 
 ## Cypress tests
