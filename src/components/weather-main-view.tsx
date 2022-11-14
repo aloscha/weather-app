@@ -26,24 +26,21 @@ class WeatherMainView extends React.Component<IProps, never> {
       );
 
     if (!loading && (error || !data))
-      return (
-        <div className="information-container">No data!</div>
-      );
+      return <div className="information-container" data-testid="information-container">No data!</div>;
 
-    const { currentConditions } = data!;
+    const { days } = data!;
+    const today = days[0];
 
     return (
       <div className="weather-mainview">
-        <div className="mainview-day-name">Today</div>
+        <div className="mainview-day-name" data-testid="mainview-day-name">Today</div>
         <div className="mainview-details-container">
           <div className="mainview-details-icon">
-            <IconViewer icon={currentConditions.icon} />
+            <IconViewer icon={today.icon} />
           </div>
           <div className="mainview-details">
-            <div className="mainview-temp">{currentConditions.temp}&deg;</div>
-            <div className="mainview-conditions">
-              {currentConditions.conditions}
-            </div>
+            <div className="mainview-temp">{today.temp}&deg;</div>
+            <div className="mainview-conditions">{today.conditions}</div>
           </div>
         </div>
       </div>

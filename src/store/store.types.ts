@@ -142,12 +142,10 @@ interface WeatherDto {
   currentConditions: CurrentConditionsDto;
 }
 
-export type DayBaseDto = Pick<DayDto, "temp" | "datetime" | "icon">;
-export type CurrentConditionsBaseDto = Pick<CurrentConditionsDto, "temp" | "icon" | "conditions">;
+export type DayBaseDto = Pick<DayDto, "temp" | "datetime" | "icon" | "conditions">;
 
 export interface WeatherBaseDto {
   days: DayBaseDto[];
-  currentConditions: CurrentConditionsBaseDto;
 }
 
 export interface GetWeatherResponse {

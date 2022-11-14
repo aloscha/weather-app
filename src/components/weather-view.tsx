@@ -43,7 +43,7 @@ class WeatherView extends React.Component<IProps, IState> {
 
     return (
       <div className="app-container">
-        <div className="cities-container">
+        <div className="cities-container" data-testid="cities-container">
           {Config.Cities.map((e) => (
             <div
               className={`city-item${e === selectedCity ? " selected" : ""}`}
