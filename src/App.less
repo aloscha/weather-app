@@ -24,6 +24,8 @@ body{
   display: table;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   .cities-container{
     display: flex;
@@ -36,6 +38,7 @@ body{
       font-size: 2rem;
       margin-left: 3rem;
       margin-right: 3rem;
+      text-align: center;
       width: 9rem;
       text-transform: capitalize;
 
@@ -44,12 +47,12 @@ body{
         font-weight: bold;
       }
 
-      &:first-child{
-        margin-left: 5rem;
-      }
-
-      &:last-child{
-        margin-right: 5rem;
+      @media only screen and (max-width : 800px) {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        flex-grow: 1;
+        width: auto;
       }
     }
   }
@@ -129,6 +132,11 @@ body{
 
         .icon-item{
           &:extend(.icon-item-base);
+
+          @media only screen and (max-width : 800px) {
+            height: 3rem;
+            width: 4rem;
+          }
         }
 
         .subview-day-name{
